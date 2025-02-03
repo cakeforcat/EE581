@@ -1,0 +1,10 @@
+[project]
+name = "data-expansion"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "opencv-python",
+    "requests>=2.32.3",
+    "tqdm>=4.67.1",
+]
