@@ -9,8 +9,8 @@ import os
 
 # download data set if not present in ../../data/original_dataset
 def download_dataset(store_path, data_url):
-    # check if folder is empty
-    if not list(store_path.glob('*')):
+    # check if folder is empty or has .gitingore file
+    if not list(store_path.glob('*')) or list(store_path.glob('.gitignore')):
         print('Downloading data set...')
         # download data set
         response = requests.get(data_url, stream=True)
