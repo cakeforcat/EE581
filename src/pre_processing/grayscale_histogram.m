@@ -2,6 +2,12 @@ clear all;
 close all;
 clc;
 
+% Histogram based classification of landslides based on grayscale images.
+% General idea is that generally, landslides are really bright spots.
+% Therefore extract these spots and classify them as landslides. In
+% general, this is probably only useful if forests or grassy locations, and
+% won't work with bodies of water or streets etc.
+
 % work with relatvie paths to data
 originalDataset =   '..\..\data\original_dataset\';
 medianFiltDataset = '..\..\data\grayscale_histogram_classified\';
@@ -39,17 +45,38 @@ for i=2:3
 
         im_gray = remove_white_areas(im_gray);
 
-        
-        h = hist(double(reshape(im_gray, 1, 512*512)), 256);
-        [peaks, locations] = findpeaks(h);
+        % calculate histogram with n bins, transform image to 1D vector for
+        % that
+        n_bins = 100;
+        h = hist(double(reshape(im_gray, 1, 512*512)), n_bins);
 
         figure(2);
-        bar(0:255, h);
+        bar(0:n_bins-1, h); % plot histogram from 0 to 255 pixel values
 
-
+        % search for max value of the top 2/3 of the histogram
+        upper_area_to_search = 2/3;
+        [max_upper, idx] = max(h(upper_area_to_search*n_bins:n_bins));
+        idx = idx + upper_area_to_search*n_bins; % readjust index to whole span of histogram
+        
+        % calculate number of not black pixels
+        not_black_pixels = sum(im_gray > 0);
+        
+        % if the max value of the upper part of hist is more than 10 % of
+        % all non black pixels, landslide is probably present
+        if max_upper > not_black_pixels * 0.1
+            % every pixel that is greater than pixel value -20 is probably
+            % part of the landslide. Open image for smoothing
+            classified_img = im_gray > (idx*(256/n_bins)-20);
+            se = strel('disk', 3);
+            classified_img = imopen(classified_img, se);
+        else
+            % create logical 0 image
+            classified_img = logical(zeros(512,512));
+        end
+        
+        figure(3);
+        imshow(classified_img);
     end
-
-
 end
 
 function image_white_areas_removed = remove_white_areas(original_image)
