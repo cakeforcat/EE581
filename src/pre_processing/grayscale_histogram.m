@@ -37,18 +37,11 @@ for i=2:3
 
         im_gray = rgb2gray(im);
 
-        im_gray_outp = remove_white_areas(im_gray);
+        im_gray = remove_white_areas(im_gray);
 
-        % figure(1);
-        % subplot(1,3,1);
-        % imshow(im_gray);
-        % 
-        % subplot(1,3,2);
-        % histogram(im_gray);
-        % 
-        % im_gray_outp = remove_white_areas(im_gray);
-        % subplot(1,3,3);
-        % histogram(im_gray_outp);
+        figure(2);
+        histogram(im_gray, 25);
+
 
     end
 
@@ -97,6 +90,11 @@ function image_white_areas_removed = remove_white_areas(original_image)
     % remove white space if it does, iterate over every line detected
     for i=1:length(lines)
         xy = [lines(i).point1; lines(i).point2];
+        if xy(1,1) > xy(1,2)    % swap starting points if x2 > x1, otherwise x_fit below has invalid value
+            temp = xy(1,:);
+            xy(1,:) = xy(2,:);
+            xy(2,:) = temp;
+        end
         plot(xy(:,1),xy(:,2),'LineWidth',1,'Color','red');  % plot lines over original image
 
         % get a polynom description of the line based on its start and end points in the form y = ax + m
@@ -113,8 +111,8 @@ function image_white_areas_removed = remove_white_areas(original_image)
         % white, over all of line and increase counter
         white_area_detected = 0;
         for j=1:length(x_fit)
-            res1 = all(original_image(1:(y_fit(j) - 1), x_fit(j)) == 255, 'all')
-            res2 = all(original_image((y_fit(j) + 1):512, x_fit(j)) == 255, 'all')
+            res1 = all(original_image(1:(y_fit(j) - 5), x_fit(j)) == 255, 'all')
+            res2 = all(original_image((y_fit(j) + 5):512, x_fit(j)) == 255, 'all')
             if ( res1 | res2 )
                 white_area_detected = white_area_detected + 1;
             end
@@ -123,7 +121,6 @@ function image_white_areas_removed = remove_white_areas(original_image)
         % if area above or below line is not white over the whole line,
         % continue with next line in list
         if white_area_detected < (length(x_fit) - 1)
-            pause(0.05);
             continue;
         end
 
@@ -138,9 +135,9 @@ function image_white_areas_removed = remove_white_areas(original_image)
         % over the whole image, colour the white areas black
         for j=1:512
             if valid_y_idx(j)
-                if all(original_image(1:y_fit(j) - 1, j) == 255, 'all')
+                if all(original_image(1:y_fit(j) - 5, j) == 255, 'all')
                     image_white_areas_removed(1:y_fit(j), j) = 0;
-                elseif all(original_image((y_fit(j) + 1):512, j) == 255, 'all')
+                elseif all(original_image((y_fit(j) + 5):512, j) == 255, 'all')
                     image_white_areas_removed((y_fit(j) + 1):512, j) = 0;
                 end
             end
