@@ -39,8 +39,12 @@ for i=2:3
 
         im_gray = remove_white_areas(im_gray);
 
+        
+        h = hist(double(reshape(im_gray, 1, 512*512)), 256);
+        [peaks, locations] = findpeaks(h);
+
         figure(2);
-        histogram(im_gray, 25);
+        bar(0:255, h);
 
 
     end
@@ -90,7 +94,7 @@ function image_white_areas_removed = remove_white_areas(original_image)
     % remove white space if it does, iterate over every line detected
     for i=1:length(lines)
         xy = [lines(i).point1; lines(i).point2];
-        if xy(1,1) > xy(1,2)    % swap starting points if x2 > x1, otherwise x_fit below has invalid value
+        if xy(1,1) > xy(2,1)    % swap starting points if x2 > x1, otherwise x_fit below has invalid value
             temp = xy(1,:);
             xy(1,:) = xy(2,:);
             xy(2,:) = temp;
@@ -111,8 +115,8 @@ function image_white_areas_removed = remove_white_areas(original_image)
         % white, over all of line and increase counter
         white_area_detected = 0;
         for j=1:length(x_fit)
-            res1 = all(original_image(1:(y_fit(j) - 5), x_fit(j)) == 255, 'all')
-            res2 = all(original_image((y_fit(j) + 5):512, x_fit(j)) == 255, 'all')
+            res1 = all(original_image(6:(y_fit(j) - 5), x_fit(j)) == 255, 'all')
+            res2 = all(original_image((y_fit(j) + 5):506, x_fit(j)) == 255, 'all')
             if ( res1 | res2 )
                 white_area_detected = white_area_detected + 1;
             end
@@ -120,7 +124,7 @@ function image_white_areas_removed = remove_white_areas(original_image)
         
         % if area above or below line is not white over the whole line,
         % continue with next line in list
-        if white_area_detected < (length(x_fit) - 1)
+        if white_area_detected < (length(x_fit) - 10)
             continue;
         end
 
@@ -147,6 +151,5 @@ function image_white_areas_removed = remove_white_areas(original_image)
     
     subplot(1,4,4); % show output image
     imshow(image_white_areas_removed);
-
 end
 
