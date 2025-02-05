@@ -55,8 +55,10 @@ for i=2:3
 
         % search for max value of the top 2/3 of the histogram
         upper_area_to_search = 2/3;
-        [max_upper, idx] = max(h(upper_area_to_search*n_bins:n_bins));
-        idx = idx + upper_area_to_search*n_bins; % readjust index to whole span of histogram
+        % as max returns the maxium value and the index of that value, the
+        % index corresponds to the pixel value of the histrogram
+        [max_upper, pixel_value] = max(h(upper_area_to_search*n_bins:n_bins));
+        pixel_value = pixel_value + upper_area_to_search*n_bins; % readjust index to whole span of histogram
         
         % calculate number of not black pixels
         not_black_pixels = sum(im_gray > 0);
@@ -66,7 +68,7 @@ for i=2:3
         if max_upper > not_black_pixels * 0.1
             % every pixel that is greater than pixel value -20 is probably
             % part of the landslide. Open image for smoothing
-            classified_img = im_gray > (idx*(256/n_bins)-20);
+            classified_img = im_gray > (pixel_value*(256/n_bins)-20);
             se = strel('disk', 3);
             classified_img = imopen(classified_img, se);
         else
