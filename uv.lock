@@ -60,7 +60,7 @@ wheels = [
 ]
 
 [[package]]
-name = "data-expansion"
+name = "ee581"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
@@ -71,7 +71,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "opencv-python" },
+    { name = "opencv-python", specifier = ">=4.11.0.86" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "tqdm", specifier = ">=4.67.1" },
 ]

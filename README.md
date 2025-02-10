@@ -1,5 +1,13 @@
 # EE581
 Landslide Detection Image processing project (Strathclyde EE581)
+# Getting started
+Python scripts rely on uv for dependency management. go to [uv](https://github.com/astral-sh/uv) and follow installation instructions for your operating system.
+Scripts were run and tested with Python 12.
+
+After installing uv, go to the desired script in /src and run the following command:
+```bash
+uv run <script_name>.py
+```
 # References
 [1] R. Kumar, D. Singh, A. Chug and A. P. Singh, "Evaluation of Deep learning based Resnet-50 for Plant Disease Classification with Stability Analysis," 2022 6th International Conference on Intelligent Computing and Control Systems (ICICCS), Madurai, India, 2022, pp. 1280-1287, doi: 10.1109/ICICCS53718.2022.9788207.
 
