@@ -10,7 +10,7 @@ clc;
 
 % work with relatvie paths to data
 originalDataset =   '..\..\data\original_dataset\';
-medianFiltDataset = '..\..\data\grayscale_histogram_classified\';
+grayscaleFiltDataset = '..\..\data\grayscale_histogram_classified\';
 
 subfolders_all = dir(fullfile(originalDataset));
 subfolders = {};
@@ -26,17 +26,22 @@ for i=1:length(subfolders_all)
 end
 
 % iterate over every subfolder of dataset
-% for i=1:length(subfolders)
-for i=2:3    
+for i=1:length(subfolders)
+    subfolders{i} % print name for tracking process
+
     images = dir(fullfile(originalDataset, subfolders{i}, 'img', '*.tif'));
 
     % create output directory
-    filtered_im_location = strcat(medianFiltDataset, subfolders{i}, '\img\');
-    if ~exist(filtered_im_location, 'dir')
-        mkdir(filtered_im_location);            
+    processed_im_location = strcat(grayscaleFiltDataset, subfolders{i}, '\img\');
+    if ~exist(processed_im_location, 'dir')
+        mkdir(processed_im_location);            
     end
 
     for j=1:length(images)
+
+        if mod(j, 100) == 0
+            j
+        end
 
         image_path = strcat(images(j).folder, '\', images(j).name);
         im = imread(image_path);
@@ -50,14 +55,14 @@ for i=2:3
         n_bins = 100;
         h = hist(double(reshape(im_gray, 1, 512*512)), n_bins);
 
-        figure(2);
-        bar(0:n_bins-1, h); % plot histogram from 0 to 255 pixel values
+        %figure(2);
+        %bar(0:n_bins-1, h); % plot histogram from 0 to 255 pixel values
 
         % search for max value of the top 2/3 of the histogram
         upper_area_to_search = 2/3;
         % as max returns the maxium value and the index of that value, the
         % index corresponds to the pixel value of the histrogram
-        [max_upper, pixel_value] = max(h(upper_area_to_search*n_bins:n_bins));
+        [max_upper, pixel_value] = max(h(floor(upper_area_to_search*n_bins):n_bins));
         pixel_value = pixel_value + upper_area_to_search*n_bins; % readjust index to whole span of histogram
         
         % calculate number of not black pixels
@@ -69,15 +74,17 @@ for i=2:3
             % every pixel that is greater than pixel value -20 is probably
             % part of the landslide. Open image for smoothing
             classified_img = im_gray > (pixel_value*(256/n_bins)-20);
-            se = strel('disk', 3);
+            se = strel('disk', 8);
             classified_img = imopen(classified_img, se);
         else
             % create logical 0 image
             classified_img = logical(zeros(512,512));
         end
         
-        figure(3);
-        imshow(classified_img);
+        %figure(3);
+        %imshow(classified_img);
+
+        imwrite(classified_img, strcat(processed_im_location, images(j).name));
     end
 end
 
@@ -87,37 +94,38 @@ function image_white_areas_removed = remove_white_areas(original_image)
     image_white_areas_removed = original_image;
 
     % detect lines and obtain them
-    edges = edge(original_image, 'canny');
+    med_filt = medfilt2(original_image, [15, 15]);
+    edges = edge(med_filt, 'canny');
     [H, theta, rho] = hough(edges);
-    peaks = houghpeaks(H,30);   % get 30 most promenent peaks in hough space
+    peaks = houghpeaks(H,100);   % get 30 most promenent peaks in hough space
     if ~isempty(peaks)
-        lines = houghlines(edges, theta, rho, peaks, 'FillGap', 200, 'MinLength', 10);
+        lines = houghlines(edges, theta, rho, peaks, 'FillGap',20,'MinLength', 10);
     end
 
 
-    figure(1);
-    subplot(1,4,1);
-    imshow(edges);  % plot detected edges
+    %figure(1);
+    %subplot(1,4,1);
+    %imshow(edges);  % plot detected edges
 
-    subplot(1,4,2); % plot hough transform
-    imshow(imadjust(rescale(H)),[],...
-       'XData',theta,...
-       'YData',rho,...
-       'InitialMagnification','fit');
-    xlabel('\theta (degrees)')
-    ylabel('\rho')
-    colormap(gca,hot)
-    hold on;
-    x = theta(peaks(:,2));
-    y = rho(peaks(:,1));
-    plot(x,y,'s','color','green', 'LineWidth',2);
-    axis on;
-    axis normal;
-    hold off;
+    %subplot(1,4,2); % plot hough transform
+    %imshow(imadjust(rescale(H)),[],...
+    %    'XData',theta,...
+    %    'YData',rho,...
+    %    'InitialMagnification','fit');
+    %xlabel('\theta (degrees)')
+    %ylabel('\rho')
+    %colormap(gca,hot)
+    %hold on;
+    %x = theta(peaks(:,2));
+    %y = rho(peaks(:,1));
+    %plot(x,y,'s','color','green', 'LineWidth',2);
+    %axis on;
+    %axis normal;
+    %hold off;
 
-    subplot(1,4,3);
-    imshow(original_image); % plot original image
-    hold on;
+    %subplot(1,4,3);
+    %imshow(original_image); % plot original image
+    %hold on;
 
     % for each line, see if it separated the useful image and white space,
     % remove white space if it does, iterate over every line detected
@@ -128,7 +136,7 @@ function image_white_areas_removed = remove_white_areas(original_image)
             xy(1,:) = xy(2,:);
             xy(2,:) = temp;
         end
-        plot(xy(:,1),xy(:,2),'LineWidth',1,'Color','red');  % plot lines over original image
+        %plot(xy(:,1),xy(:,2),'LineWidth',1,'Color','red');  % plot lines over original image
 
         % get a polynom description of the line based on its start and end points in the form y = ax + m
         polynom_description = polyfit( [xy(1,1), xy(2,1)], [xy(1,2), xy(2,2)], 1);
@@ -144,8 +152,8 @@ function image_white_areas_removed = remove_white_areas(original_image)
         % white, over all of line and increase counter
         white_area_detected = 0;
         for j=1:length(x_fit)
-            res1 = all(original_image(6:(y_fit(j) - 5), x_fit(j)) == 255, 'all')
-            res2 = all(original_image((y_fit(j) + 5):506, x_fit(j)) == 255, 'all')
+            res1 = all(original_image(6:(y_fit(j) - 5), x_fit(j)) == 255, 'all');
+            res2 = all(original_image((y_fit(j) + 5):506, x_fit(j)) == 255, 'all');
             if ( res1 | res2 )
                 white_area_detected = white_area_detected + 1;
             end
@@ -178,7 +186,7 @@ function image_white_areas_removed = remove_white_areas(original_image)
         break;
     end
     
-    subplot(1,4,4); % show output image
-    imshow(image_white_areas_removed);
+    %subplot(1,4,4); % show output image
+    %imshow(image_white_areas_removed);
 end
 
