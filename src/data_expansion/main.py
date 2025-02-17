@@ -6,11 +6,12 @@ from tqdm import tqdm
 import requests
 import zipfile
 import os
+import shutil
 
 # download data set if not present in ../../data/original_dataset
 def download_dataset(store_path, data_url):
-    # check if folder is empty or has .gitingore file
-    if not list(store_path.glob('*')) or list(store_path.glob('.gitignore')):
+    # check if folder is empty and has .gitingore file
+    if len(list(store_path.glob('*'))) == 1 and store_path.joinpath('.gitignore').exists():
         print('Downloading data set...')
         # download data set
         response = requests.get(data_url, stream=True)
@@ -49,6 +50,15 @@ def fix_folder_names(store_path):
             folder.rename(data_path / new_name)
             print(f'Fixed {folder.name} to {new_name}!')
 
+def delete_extra(store_path):
+    for folder in list(store_path.glob('*')):
+        if folder.is_dir():
+            # remove the 'mask' dir and files in it
+            mask_dir = folder / 'mask'
+            if mask_dir.exists():
+                shutil.rmtree(mask_dir)
+                print(f'Removed {mask_dir}!')
+
 if __name__ == '__main__':
     # download data set if not present in ../../data/original_dataset
     data_url = 'https://zenodo.org/api/records/10294997/files-archive'
@@ -57,6 +67,9 @@ if __name__ == '__main__':
 
     # fix folder names
     fix_folder_names(data_path)
+
+    # remove extra black images in the mask subdir
+    delete_extra(data_path)
 
     # list available data sets (only folders)
     print('Available data sets:')

@@ -1,6 +1,4 @@
 import pathlib
-
-import cv2
 import cv2 as cv
 
 def images(datagroup, dataset, index):
