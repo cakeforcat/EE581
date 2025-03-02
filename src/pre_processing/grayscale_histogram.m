@@ -8,6 +8,8 @@ clc;
 % general, this is probably only useful if forests or grassy locations, and
 % won't work with bodies of water or streets etc.
 
+% F1 score over whole dataset: 35.15 %
+
 % work with relatvie paths to data
 originalDataset =   '..\..\data\original_dataset\';
 grayscaleFiltDataset = '..\..\data\grayscale_histogram_classified\';
@@ -36,7 +38,7 @@ for i=1:length(subfolders)
     if ~exist(processed_im_location, 'dir')
         mkdir(processed_im_location);            
     end
-
+    
     for j=1:length(images)
 
         if mod(j, 100) == 0
@@ -73,8 +75,8 @@ for i=1:length(subfolders)
         if max_upper > not_black_pixels * 0.1
             % every pixel that is greater than pixel value -20 is probably
             % part of the landslide. Open image for smoothing
-            classified_img = im_gray > (pixel_value*(256/n_bins)-20);
-            se = strel('disk', 8);
+            classified_img = im_gray > (pixel_value*(256/n_bins)-80);
+            se = strel('disk', 5);
             classified_img = imopen(classified_img, se);
         else
             % create logical 0 image
