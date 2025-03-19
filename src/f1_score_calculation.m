@@ -5,51 +5,31 @@ clc;
 
 % work with relatvie paths to data
 % change as necessary
-originalDataset =   '..\data\original_dataset\';
-modifiedDataset = '..\data\grayscale_histogram_classified\';
+labels =   '..\data\model_output\labels\';
+masks = '..\data\model_output\predictions_morphology\';
 
-subfolders_all = dir(fullfile(modifiedDataset));
-subfolders = {};
-
-% store all valid file names to variable subfolders
-for i=1:length(subfolders_all)
-    if ~subfolders_all(i).isdir || ...
-        (strcmp(subfolders_all(i).name,'.')) || ...
-        (strcmp(subfolders_all(i).name,'..'))
-        continue
-    end
-    subfolders{end+1} = subfolders_all(i).name;
-end
+label_files = dir(fullfile(labels, '*.jpg'));
+masks_files = dir(fullfile(masks, '*.jpg'));
 
 true_pos = 0;
 false_pos = 0;
 true_neg = 0;
 false_neg = 0;
 
-% iterate over every subfolder of dataset
-for i=1:length(subfolders)
-    subfolders{i} % print name for tracking process
+% iterate over every image
+for i=1:length(label_files)
 
-    classified_images = dir(fullfile(modifiedDataset, subfolders{i}, 'img', '*.tif'));
-    masks = dir(fullfile(originalDataset, subfolders{i}, 'mask', '*.tif'));
+    labels_path = fullfile(labels, label_files(i).name);
+    im = imread(labels_path);
+    im = im > 0;
 
-    for j=1:length(classified_images)
+    masks_path = fullfile(masks, masks_files(i).name);
+    mask = imread(masks_path);
+    mask = mask > 0;
 
-        if mod(j, 100) == 0
-            j
-        end
-
-        image_path = strcat(classified_images(j).folder, '\', classified_images(j).name);
-        im = imread(image_path);
-
-        mask_path = strcat(masks(j).folder, '\', masks(j).name);
-        mask = imread(mask_path);
-        mask = mask > 0;  % mask is uint8 and not logical
-
-        true_pos = true_pos + sum(im & mask, 'all');
-        false_pos = false_pos + sum(im & ~mask, 'all');
-        false_neg = false_neg + sum(~im & mask, 'all');
-    end
+    true_pos = true_pos + sum(im & mask, 'all');
+    false_pos = false_pos + sum(im & ~mask, 'all');
+    false_neg = false_neg + sum(~im & mask, 'all');
 end
 
 precision = true_pos / (true_pos + false_pos);
