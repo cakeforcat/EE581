@@ -1,0 +1,727 @@
+----- HSV CAS No Closing -----
+overall_correct_landslide_hsv_cas_no_closing = 4.17128
+overall_precision_hsv_cas_no_closing = 0.04171
+overall_pix_precision_hsv_cas_no_closing = 0.04171
+overall_recall_hsv_cas_no_closing = 0.22923
+overall_pix_recall_hsv_cas_no_closing = 0.22923
+overall_f1_score_hsv_cas_no_closing = 0.05358
+overall_pix_f1_score_hsv_cas_no_closing = 0.05358
+overall_accuracy_hsv_cas_no_closing = 0.89573
+overall_pix_accuracy_hsv_cas_no_closing = 0.89573
+Correct landslide per set: 3.93618
+Correct landslide per set: 12.17381
+Correct landslide per set: 10.56643
+Correct landslide per set: 3.50717
+Correct landslide per set: 0.61623
+Correct landslide per set: 4.08133
+Correct landslide per set: 4.51362
+Correct landslide per set: 2.89550
+Correct landslide per set: 5.88144
+Correct landslide per set: 3.48354
+Correct landslide per set: 2.75831
+Correct landslide per set: 1.35428
+Correct landslide per set: 1.08546
+Correct landslide per set: 1.54458
+Precision per set: 0.03936
+Precision per set: 0.12174
+Precision per set: 0.10566
+Precision per set: 0.03507
+Precision per set: 0.00616
+Precision per set: 0.04081
+Precision per set: 0.04514
+Precision per set: 0.02895
+Precision per set: 0.05881
+Precision per set: 0.03484
+Precision per set: 0.02758
+Precision per set: 0.01354
+Precision per set: 0.01085
+Precision per set: 0.01545
+Local recision per set: 0.03936
+Local recision per set: 0.12174
+Local recision per set: 0.10566
+Local recision per set: 0.03507
+Local recision per set: 0.00616
+Local recision per set: 0.04081
+Local recision per set: 0.04514
+Local recision per set: 0.02895
+Local recision per set: 0.05881
+Local recision per set: 0.03484
+Local recision per set: 0.02758
+Local recision per set: 0.01354
+Local recision per set: 0.01085
+Local recision per set: 0.01545
+Recall per set: 0.35377
+Recall per set: 0.66805
+Recall per set: 0.57431
+Recall per set: 0.08506
+Recall per set: 0.07232
+Recall per set: 0.28950
+Recall per set: 0.27676
+Recall per set: 0.12731
+Recall per set: 0.16918
+Recall per set: 0.16908
+Recall per set: 0.11215
+Recall per set: 0.15482
+Recall per set: 0.11382
+Recall per set: 0.04308
+Local recall per set: 0.35377
+Local recall per set: 0.66805
+Local recall per set: 0.57431
+Local recall per set: 0.08506
+Local recall per set: 0.07232
+Local recall per set: 0.28950
+Local recall per set: 0.27676
+Local recall per set: 0.12731
+Local recall per set: 0.16918
+Local recall per set: 0.16908
+Local recall per set: 0.11215
+Local recall per set: 0.15482
+Local recall per set: 0.11382
+Local recall per set: 0.04308
+F1 score per set: 0.05365
+F1 score per set: 0.16776
+F1 score per set: 0.14442
+F1 score per set: 0.03572
+F1 score per set: 0.00912
+F1 score per set: 0.05783
+F1 score per set: 0.05641
+F1 score per set: 0.03575
+F1 score per set: 0.06354
+F1 score per set: 0.04449
+F1 score per set: 0.03235
+F1 score per set: 0.01860
+F1 score per set: 0.01699
+F1 score per set: 0.01350
+Local F1 score per set: 0.05365
+Local F1 score per set: 0.16776
+Local F1 score per set: 0.14442
+Local F1 score per set: 0.03572
+Local F1 score per set: 0.00912
+Local F1 score per set: 0.05783
+Local F1 score per set: 0.05641
+Local F1 score per set: 0.03575
+Local F1 score per set: 0.06354
+Local F1 score per set: 0.04449
+Local F1 score per set: 0.03235
+Local F1 score per set: 0.01860
+Local F1 score per set: 0.01699
+Local F1 score per set: 0.01350
+Accuracy per set: 0.89581
+Accuracy per set: 0.77096
+Accuracy per set: 0.87261
+Accuracy per set: 0.96042
+Accuracy per set: 0.89745
+Accuracy per set: 0.88283
+Accuracy per set: 0.80978
+Accuracy per set: 0.91618
+Accuracy per set: 0.91610
+Accuracy per set: 0.87620
+Accuracy per set: 0.90196
+Accuracy per set: 0.92041
+Accuracy per set: 0.95080
+Accuracy per set: 0.96876
+Local accuracy per set: 0.89581
+Local accuracy per set: 0.77096
+Local accuracy per set: 0.87261
+Local accuracy per set: 0.96042
+Local accuracy per set: 0.89745
+Local accuracy per set: 0.88283
+Local accuracy per set: 0.80978
+Local accuracy per set: 0.91618
+Local accuracy per set: 0.91610
+Local accuracy per set: 0.87620
+Local accuracy per set: 0.90196
+Local accuracy per set: 0.92041
+Local accuracy per set: 0.95080
+Local accuracy per set: 0.96876
+Duration of processing: 1445.1s
+----- HSV Sense No Closing -----
+overall_correct_landslide_hsv_sense_cas_no_closing = 42.16615
+overall_precision_hsv_sense_cas_no_closing = 0.00892
+overall_pix_precision_hsv_sense_cas_no_closing = 0.00892
+overall_recall_hsv_sense_cas_no_closing = 0.10357
+overall_pix_recall_hsv_sense_cas_no_closing = 0.10357
+overall_f1_score_hsv_sense_cas_no_closing = 0.01342
+overall_pix_f1_score_hsv_sense_cas_no_closing = 0.01342
+overall_accuracy_hsv_sense_cas_no_closing = 0.97526
+overall_pix_accuracy_hsv_sense_cas_no_closing = 0.97526
+Duration of processing: 120.0s
+----- HSV CAS 5 Closing -----
+overall_correct_landslide_hsv_cas_5_closing = 5.19177
+overall_precision_hsv_cas_5_closing = 0.05192
+overall_pix_precision_hsv_cas_5_closing = 0.05192
+overall_recall_hsv_cas_5_closing = 0.23159
+overall_pix_recall_hsv_cas_5_closing = 0.23159
+overall_f1_score_hsv_cas_5_closing = 0.06327
+overall_pix_f1_score_hsv_cas_5_closing = 0.06327
+overall_accuracy_hsv_cas_5_closing = 0.89331
+overall_pix_accuracy_hsv_cas_5_closing = 0.89331
+Correct landslide per set: 4.77858
+Correct landslide per set: 14.38283
+Correct landslide per set: 13.17888
+Correct landslide per set: 4.38866
+Correct landslide per set: 0.67306
+Correct landslide per set: 4.68759
+Correct landslide per set: 6.06774
+Correct landslide per set: 5.62638
+Correct landslide per set: 7.00814
+Correct landslide per set: 4.06634
+Correct landslide per set: 3.36866
+Correct landslide per set: 1.49901
+Correct landslide per set: 1.18650
+Correct landslide per set: 1.77247
+Precision per set: 0.04779
+Precision per set: 0.14383
+Precision per set: 0.13179
+Precision per set: 0.04389
+Precision per set: 0.00673
+Precision per set: 0.04688
+Precision per set: 0.06068
+Precision per set: 0.05626
+Precision per set: 0.07008
+Precision per set: 0.04066
+Precision per set: 0.03369
+Precision per set: 0.01499
+Precision per set: 0.01186
+Precision per set: 0.01772
+Local recision per set: 0.04779
+Local recision per set: 0.14383
+Local recision per set: 0.13179
+Local recision per set: 0.04389
+Local recision per set: 0.00673
+Local recision per set: 0.04688
+Local recision per set: 0.06068
+Local recision per set: 0.05626
+Local recision per set: 0.07008
+Local recision per set: 0.04066
+Local recision per set: 0.03369
+Local recision per set: 0.01499
+Local recision per set: 0.01186
+Local recision per set: 0.01772
+Recall per set: 0.35646
+Recall per set: 0.67068
+Recall per set: 0.57950
+Recall per set: 0.08487
+Recall per set: 0.07207
+Recall per set: 0.29038
+Recall per set: 0.27928
+Recall per set: 0.13978
+Recall per set: 0.16912
+Recall per set: 0.17070
+Recall per set: 0.11447
+Recall per set: 0.15559
+Recall per set: 0.11584
+Recall per set: 0.04357
+Local recall per set: 0.35646
+Local recall per set: 0.67068
+Local recall per set: 0.57950
+Local recall per set: 0.08487
+Local recall per set: 0.07207
+Local recall per set: 0.29038
+Local recall per set: 0.27928
+Local recall per set: 0.13978
+Local recall per set: 0.16912
+Local recall per set: 0.17070
+Local recall per set: 0.11447
+Local recall per set: 0.15559
+Local recall per set: 0.11584
+Local recall per set: 0.04357
+F1 score per set: 0.06194
+F1 score per set: 0.19184
+F1 score per set: 0.17235
+F1 score per set: 0.04150
+F1 score per set: 0.00981
+F1 score per set: 0.06448
+F1 score per set: 0.07215
+F1 score per set: 0.05925
+F1 score per set: 0.07150
+F1 score per set: 0.05031
+F1 score per set: 0.03778
+F1 score per set: 0.02012
+F1 score per set: 0.01835
+F1 score per set: 0.01444
+Local F1 score per set: 0.06194
+Local F1 score per set: 0.19184
+Local F1 score per set: 0.17235
+Local F1 score per set: 0.04150
+Local F1 score per set: 0.00981
+Local F1 score per set: 0.06448
+Local F1 score per set: 0.07215
+Local F1 score per set: 0.05925
+Local F1 score per set: 0.07150
+Local F1 score per set: 0.05031
+Local F1 score per set: 0.03778
+Local F1 score per set: 0.02012
+Local F1 score per set: 0.01835
+Local F1 score per set: 0.01444
+Accuracy per set: 0.89539
+Accuracy per set: 0.77322
+Accuracy per set: 0.87340
+Accuracy per set: 0.95678
+Accuracy per set: 0.89584
+Accuracy per set: 0.88153
+Accuracy per set: 0.80582
+Accuracy per set: 0.90859
+Accuracy per set: 0.91334
+Accuracy per set: 0.87155
+Accuracy per set: 0.89648
+Accuracy per set: 0.91928
+Accuracy per set: 0.95048
+Accuracy per set: 0.96458
+Local accuracy per set: 0.89539
+Local accuracy per set: 0.77322
+Local accuracy per set: 0.87340
+Local accuracy per set: 0.95678
+Local accuracy per set: 0.89584
+Local accuracy per set: 0.88153
+Local accuracy per set: 0.80582
+Local accuracy per set: 0.90859
+Local accuracy per set: 0.91334
+Local accuracy per set: 0.87155
+Local accuracy per set: 0.89648
+Local accuracy per set: 0.91928
+Local accuracy per set: 0.95048
+Local accuracy per set: 0.96458
+Duration of processing: 1522.9s
+----- HSV Sense 5 Closing -----
+overall_correct_landslide_hsv_sense_cas_5_closing = 42.53785
+overall_precision_hsv_sense_cas_5_closing = 0.01264
+overall_pix_precision_hsv_sense_cas_5_closing = 0.01264
+overall_recall_hsv_sense_cas_5_closing = 0.10517
+overall_pix_recall_hsv_sense_cas_5_closing = 0.10517
+overall_f1_score_hsv_sense_cas_5_closing = 0.01750
+overall_pix_f1_score_hsv_sense_cas_5_closing = 0.01750
+overall_accuracy_hsv_sense_cas_5_closing = 0.97455
+overall_pix_accuracy_hsv_sense_cas_5_closing = 0.97455
+Duration of processing: 125.7s
+----- HSV CAS 7 closing -----
+overall_correct_landslide_hsv_cas_7_closing = 5.95357
+overall_precision_hsv_cas_7_closing = 0.05954
+overall_pix_precision_hsv_cas_7_closing = 0.05954
+overall_recall_hsv_cas_7_closing = 0.23247
+overall_pix_recall_hsv_cas_7_closing = 0.23247
+overall_f1_score_hsv_cas_7_closing = 0.06991
+overall_pix_f1_score_hsv_cas_7_closing = 0.06991
+overall_accuracy_hsv_cas_7_closing = 0.89149
+overall_pix_accuracy_hsv_cas_7_closing = 0.89149
+Correct landslide per set: 5.54588
+Correct landslide per set: 15.82517
+Correct landslide per set: 14.88290
+Correct landslide per set: 5.27738
+Correct landslide per set: 0.69543
+Correct landslide per set: 5.28842
+Correct landslide per set: 7.26555
+Correct landslide per set: 7.38081
+Correct landslide per set: 7.91757
+Correct landslide per set: 4.43631
+Correct landslide per set: 3.76752
+Correct landslide per set: 1.78657
+Correct landslide per set: 1.25721
+Correct landslide per set: 2.02325
+Precision per set: 0.05546
+Precision per set: 0.15825
+Precision per set: 0.14883
+Precision per set: 0.05277
+Precision per set: 0.00695
+Precision per set: 0.05288
+Precision per set: 0.07266
+Precision per set: 0.07381
+Precision per set: 0.07918
+Precision per set: 0.04436
+Precision per set: 0.03768
+Precision per set: 0.01787
+Precision per set: 0.01257
+Precision per set: 0.02023
+Local recision per set: 0.05546
+Local recision per set: 0.15825
+Local recision per set: 0.14883
+Local recision per set: 0.05277
+Local recision per set: 0.00695
+Local recision per set: 0.05288
+Local recision per set: 0.07266
+Local recision per set: 0.07381
+Local recision per set: 0.07918
+Local recision per set: 0.04436
+Local recision per set: 0.03768
+Local recision per set: 0.01787
+Local recision per set: 0.01257
+Local recision per set: 0.02023
+Recall per set: 0.35877
+Recall per set: 0.67101
+Recall per set: 0.58137
+Recall per set: 0.08464
+Recall per set: 0.07211
+Recall per set: 0.29066
+Recall per set: 0.28128
+Recall per set: 0.14140
+Recall per set: 0.16892
+Recall per set: 0.17144
+Recall per set: 0.11621
+Recall per set: 0.15723
+Recall per set: 0.11609
+Recall per set: 0.04348
+Local recall per set: 0.35877
+Local recall per set: 0.67101
+Local recall per set: 0.58137
+Local recall per set: 0.08464
+Local recall per set: 0.07211
+Local recall per set: 0.29066
+Local recall per set: 0.28128
+Local recall per set: 0.14140
+Local recall per set: 0.16892
+Local recall per set: 0.17144
+Local recall per set: 0.11621
+Local recall per set: 0.15723
+Local recall per set: 0.11609
+Local recall per set: 0.04348
+F1 score per set: 0.06900
+F1 score per set: 0.20697
+F1 score per set: 0.18913
+F1 score per set: 0.04716
+F1 score per set: 0.01008
+F1 score per set: 0.07074
+F1 score per set: 0.08371
+F1 score per set: 0.07218
+F1 score per set: 0.07727
+F1 score per set: 0.05397
+F1 score per set: 0.04115
+F1 score per set: 0.02300
+F1 score per set: 0.01920
+F1 score per set: 0.01523
+Local F1 score per set: 0.06900
+Local F1 score per set: 0.20697
+Local F1 score per set: 0.18913
+Local F1 score per set: 0.04716
+Local F1 score per set: 0.01008
+Local F1 score per set: 0.07074
+Local F1 score per set: 0.08371
+Local F1 score per set: 0.07218
+Local F1 score per set: 0.07727
+Local F1 score per set: 0.05397
+Local F1 score per set: 0.04115
+Local F1 score per set: 0.02300
+Local F1 score per set: 0.01920
+Local F1 score per set: 0.01523
+Accuracy per set: 0.89472
+Accuracy per set: 0.77469
+Accuracy per set: 0.87373
+Accuracy per set: 0.95383
+Accuracy per set: 0.89519
+Accuracy per set: 0.88019
+Accuracy per set: 0.80303
+Accuracy per set: 0.90247
+Accuracy per set: 0.91121
+Accuracy per set: 0.86883
+Accuracy per set: 0.89314
+Accuracy per set: 0.91791
+Accuracy per set: 0.95020
+Accuracy per set: 0.96169
+Local accuracy per set: 0.89472
+Local accuracy per set: 0.77469
+Local accuracy per set: 0.87373
+Local accuracy per set: 0.95383
+Local accuracy per set: 0.89519
+Local accuracy per set: 0.88019
+Local accuracy per set: 0.80303
+Local accuracy per set: 0.90247
+Local accuracy per set: 0.91121
+Local accuracy per set: 0.86883
+Local accuracy per set: 0.89314
+Local accuracy per set: 0.91791
+Local accuracy per set: 0.95020
+Local accuracy per set: 0.96169
+Duration of processing: 1575.6s
+----- HSV Sense 7 Closing -----
+overall_correct_landslide_hsv_sense_cas_7_closing = 42.83071
+overall_precision_hsv_sense_cas_7_closing = 0.01557
+overall_pix_precision_hsv_sense_cas_7_closing = 0.01557
+overall_recall_hsv_sense_cas_7_closing = 0.10642
+overall_pix_recall_hsv_sense_cas_7_closing = 0.10642
+overall_f1_score_hsv_sense_cas_7_closing = 0.02051
+overall_pix_f1_score_hsv_sense_cas_7_closing = 0.02051
+overall_accuracy_hsv_sense_cas_7_closing = 0.97369
+overall_pix_accuracy_hsv_sense_cas_7_closing = 0.97369
+Duration of processing: 126.2s
+----- Green Quantisation CAS No Closing -----
+overall_correct_landslide_gq_cas = 100.00000
+overall_precision_gq_cas = 1.00000
+overall_pix_precision_gq_cas = 1.00000
+overall_recall_hsv_cas_5_closing = 0.09467
+overall_pix_recall_gq_cas = 0.09467
+overall_f1_score_gq_cas = 0.15068
+overall_pix_f1_score_gq_cas = 0.15068
+overall_accuracy_gq_cas = 0.09467
+overall_pix_accuracy_gq_cas = 0.09467
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Correct landslide per set: 100.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Precision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Local recision per set: 1.00000
+Recall per set: 0.10254
+Recall per set: 0.23737
+Recall per set: 0.12708
+Recall per set: 0.03065
+Recall per set: 0.08809
+Recall per set: 0.10951
+Recall per set: 0.17888
+Recall per set: 0.07105
+Recall per set: 0.07104
+Recall per set: 0.10492
+Recall per set: 0.07800
+Recall per set: 0.06858
+Recall per set: 0.04551
+Recall per set: 0.01211
+Local recall per set: 0.10254
+Local recall per set: 0.23737
+Local recall per set: 0.12708
+Local recall per set: 0.03065
+Local recall per set: 0.08809
+Local recall per set: 0.10951
+Local recall per set: 0.17888
+Local recall per set: 0.07105
+Local recall per set: 0.07104
+Local recall per set: 0.10492
+Local recall per set: 0.07800
+Local recall per set: 0.06858
+Local recall per set: 0.04551
+Local recall per set: 0.01211
+F1 score per set: 0.16799
+F1 score per set: 0.32345
+F1 score per set: 0.19350
+F1 score per set: 0.05392
+F1 score per set: 0.14430
+F1 score per set: 0.18348
+F1 score per set: 0.26245
+F1 score per set: 0.12664
+F1 score per set: 0.12111
+F1 score per set: 0.17152
+F1 score per set: 0.13475
+F1 score per set: 0.11942
+F1 score per set: 0.08374
+F1 score per set: 0.02320
+Local F1 score per set: 0.16799
+Local F1 score per set: 0.32345
+Local F1 score per set: 0.19350
+Local F1 score per set: 0.05392
+Local F1 score per set: 0.14430
+Local F1 score per set: 0.18348
+Local F1 score per set: 0.26245
+Local F1 score per set: 0.12664
+Local F1 score per set: 0.12111
+Local F1 score per set: 0.17152
+Local F1 score per set: 0.13475
+Local F1 score per set: 0.11942
+Local F1 score per set: 0.08374
+Local F1 score per set: 0.02320
+Accuracy per set: 0.10254
+Accuracy per set: 0.23737
+Accuracy per set: 0.12708
+Accuracy per set: 0.03065
+Accuracy per set: 0.08809
+Accuracy per set: 0.10951
+Accuracy per set: 0.17888
+Accuracy per set: 0.07105
+Accuracy per set: 0.07104
+Accuracy per set: 0.10492
+Accuracy per set: 0.07800
+Accuracy per set: 0.06858
+Accuracy per set: 0.04551
+Accuracy per set: 0.01211
+Local accuracy per set: 0.10254
+Local accuracy per set: 0.23737
+Local accuracy per set: 0.12708
+Local accuracy per set: 0.03065
+Local accuracy per set: 0.08809
+Local accuracy per set: 0.10951
+Local accuracy per set: 0.17888
+Local accuracy per set: 0.07105
+Local accuracy per set: 0.07104
+Local accuracy per set: 0.10492
+Local accuracy per set: 0.07800
+Local accuracy per set: 0.06858
+Local accuracy per set: 0.04551
+Local accuracy per set: 0.01211
+----- Green Quantisation Sense No Closing -----
+overall_correct_landslide_gq_sense_cas_no_closing = 100.00000
+overall_precision_gq_sense_cas_no_closing = 0.58726
+overall_pix_precision_gq_sense_cas_no_closing = 0.58726
+overall_recall_gq_sense_cas_no_closing = 0.02318
+overall_pix_recall_gq_sense_cas_no_closing = 0.02318
+overall_f1_score_gq_sense_cas_no_closing = 0.04204
+overall_pix_f1_score_gq_sense_cas_no_closing = 0.04204
+overall_accuracy_gq_sense_cas_no_closing = 0.02318
+overall_pix_accuracy_gq_sense_cas_no_closing = 0.02318
+Duration of processing: 110.8s
+----- Superpixel CAS No Closing -----
+overall_correct_landslide_sp_cas = 15.71177
+overall_precision_sp_cas = 0.15712
+overall_pix_precision_sp_cas = 0.15712
+overall_recall_sp_cas = 0.31933
+overall_pix_recall_sp_cas = 0.31933
+overall_f1_score_sp_cas = 0.15690
+overall_pix_f1_score_sp_cas = 0.15690
+overall_accuracy_sp_cas = 0.86848
+overall_pix_accuracy_sp_cas = 0.86848
+Correct landslide per set: 4.34959
+Correct landslide per set: 20.67659
+Correct landslide per set: 16.50708
+Correct landslide per set: 2.64686
+Correct landslide per set: 6.84387
+Correct landslide per set: 32.68970
+Correct landslide per set: 18.79562
+Correct landslide per set: 15.88657
+Correct landslide per set: 28.61088
+Correct landslide per set: 11.97235
+Correct landslide per set: 12.19929
+Correct landslide per set: 39.07102
+Correct landslide per set: 8.73218
+Correct landslide per set: 0.98318
+Precision per set: 0.04350
+Precision per set: 0.20677
+Precision per set: 0.16507
+Precision per set: 0.02647
+Precision per set: 0.06844
+Precision per set: 0.32690
+Precision per set: 0.18796
+Precision per set: 0.15887
+Precision per set: 0.28611
+Precision per set: 0.11972
+Precision per set: 0.12199
+Precision per set: 0.39071
+Precision per set: 0.08732
+Precision per set: 0.00983
+Local recision per set: 0.04350
+Local recision per set: 0.20677
+Local recision per set: 0.16507
+Local recision per set: 0.02647
+Local recision per set: 0.06844
+Local recision per set: 0.32690
+Local recision per set: 0.18796
+Local recision per set: 0.15887
+Local recision per set: 0.28611
+Local recision per set: 0.11972
+Local recision per set: 0.12199
+Local recision per set: 0.39071
+Local recision per set: 0.08732
+Local recision per set: 0.00983
+Recall per set: 0.30033
+Recall per set: 0.64123
+Recall per set: 0.51631
+Recall per set: 0.05388
+Recall per set: 0.37994
+Recall per set: 0.50696
+Recall per set: 0.29935
+Recall per set: 0.12724
+Recall per set: 0.19595
+Recall per set: 0.21476
+Recall per set: 0.15795
+Recall per set: 0.49587
+Recall per set: 0.55616
+Recall per set: 0.02472
+Local recall per set: 0.30033
+Local recall per set: 0.64123
+Local recall per set: 0.51631
+Local recall per set: 0.05388
+Local recall per set: 0.37994
+Local recall per set: 0.50696
+Local recall per set: 0.29935
+Local recall per set: 0.12724
+Local recall per set: 0.19595
+Local recall per set: 0.21476
+Local recall per set: 0.15795
+Local recall per set: 0.49587
+Local recall per set: 0.55616
+Local recall per set: 0.02472
+F1 score per set: 0.06086
+F1 score per set: 0.25451
+F1 score per set: 0.19334
+F1 score per set: 0.02197
+F1 score per set: 0.09089
+F1 score per set: 0.33138
+F1 score per set: 0.18245
+F1 score per set: 0.12316
+F1 score per set: 0.18841
+F1 score per set: 0.11622
+F1 score per set: 0.10972
+F1 score per set: 0.38065
+F1 score per set: 0.13417
+F1 score per set: 0.00886
+Local F1 score per set: 0.06086
+Local F1 score per set: 0.25451
+Local F1 score per set: 0.19334
+Local F1 score per set: 0.02197
+Local F1 score per set: 0.09089
+Local F1 score per set: 0.33138
+Local F1 score per set: 0.18245
+Local F1 score per set: 0.12316
+Local F1 score per set: 0.18841
+Local F1 score per set: 0.11622
+Local F1 score per set: 0.10972
+Local F1 score per set: 0.38065
+Local F1 score per set: 0.13417
+Local F1 score per set: 0.00886
+Accuracy per set: 0.88492
+Accuracy per set: 0.79530
+Accuracy per set: 0.85302
+Accuracy per set: 0.90581
+Accuracy per set: 0.90239
+Accuracy per set: 0.88441
+Accuracy per set: 0.79384
+Accuracy per set: 0.81746
+Accuracy per set: 0.85815
+Accuracy per set: 0.83799
+Accuracy per set: 0.84302
+Accuracy per set: 0.89793
+Accuracy per set: 0.95728
+Accuracy per set: 0.92722
+Local accuracy per set: 0.88492
+Local accuracy per set: 0.79530
+Local accuracy per set: 0.85302
+Local accuracy per set: 0.90581
+Local accuracy per set: 0.90239
+Local accuracy per set: 0.88441
+Local accuracy per set: 0.79384
+Local accuracy per set: 0.81746
+Local accuracy per set: 0.85815
+Local accuracy per set: 0.83799
+Local accuracy per set: 0.84302
+Local accuracy per set: 0.89793
+Local accuracy per set: 0.95728
+Local accuracy per set: 0.92722
