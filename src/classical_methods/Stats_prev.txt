@@ -608,3 +608,14 @@ Local F1 score per set: 0.06086, 0.25451, 0.19334, 0.02197, 0.09089, 0.33138, 0.
 Accuracy score per set: 0.88492, 0.79530, 0.85302, 0.90581, 0.90239, 0.88441, 0.79384, 0.81746, 0.85815, 0.83799, 0.84302, 0.89793, 0.95728, 0.92722
 Local accuracy score per set: 0.88492, 0.79530, 0.85302, 0.90581, 0.90239, 0.88441, 0.79384, 0.81746, 0.85815, 0.83799, 0.84302, 0.89793, 0.95728, 0.92722
 Duration of processing: 5085.2s
+----- Superpixel Sense No Closing -----
+overall_correct_landslide_sp_sense_cas_no_closing = 41.27402
+overall_precision_sp_sense_cas_no_closing = 0.00000
+overall_pix_precision_sp_sense_cas_no_closing = 0.00000
+overall_recall_sp_sense_cas_no_closing = 0.00000
+overall_pix_recall_sp_sense_cas_no_closing = 0.00000
+overall_f1_score_sp_sense_cas_no_closing = 0.00000
+overall_pix_f1_score_sp_sense_cas_no_closing = 0.00000
+overall_accuracy_sp_sense_cas_no_closing = 0.97634
+overall_pix_accuracy_sp_sense_cas_no_closing = 0.97634
+Duration of processing: 169.0s
