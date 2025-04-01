@@ -4,8 +4,9 @@ Landslide Detection Image processing project (Strathclyde EE581)
 Python scripts rely on uv for dependency management. go to [uv](https://github.com/astral-sh/uv) and follow installation instructions for your operating system.
 Scripts were run and tested with Python 12.
 
-After installing uv, go to the desired script in /src and run the following command:
+After installing uv, after installing uv, run the following command to execute the script:
 ```bash
+cd src/<script_dir>
 uv run <script_name>.py
 ```
 # References
