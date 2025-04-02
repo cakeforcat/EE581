@@ -8,7 +8,7 @@ clc;
 % general, this is probably only useful if forests or grassy locations, and
 % won't work with bodies of water or streets etc.
 
-% F1 score over whole dataset: 35.15 %
+% F1 score over whole CAS dataset: 35.15 %
 
 % work with relatvie paths to data
 originalDataset =   '..\..\data\original_dataset\';
@@ -105,30 +105,6 @@ function image_white_areas_removed = remove_white_areas(original_image)
     end
 
 
-    %figure(1);
-    %subplot(1,4,1);
-    %imshow(edges);  % plot detected edges
-
-    %subplot(1,4,2); % plot hough transform
-    %imshow(imadjust(rescale(H)),[],...
-    %    'XData',theta,...
-    %    'YData',rho,...
-    %    'InitialMagnification','fit');
-    %xlabel('\theta (degrees)')
-    %ylabel('\rho')
-    %colormap(gca,hot)
-    %hold on;
-    %x = theta(peaks(:,2));
-    %y = rho(peaks(:,1));
-    %plot(x,y,'s','color','green', 'LineWidth',2);
-    %axis on;
-    %axis normal;
-    %hold off;
-
-    %subplot(1,4,3);
-    %imshow(original_image); % plot original image
-    %hold on;
-
     % for each line, see if it separated the useful image and white space,
     % remove white space if it does, iterate over every line detected
     for i=1:length(lines)
@@ -187,8 +163,5 @@ function image_white_areas_removed = remove_white_areas(original_image)
         end
         break;
     end
-    
-    %subplot(1,4,4); % show output image
-    %imshow(image_white_areas_removed);
 end
 
