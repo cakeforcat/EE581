@@ -89,7 +89,7 @@ if __name__ == '__main__':
             axs[0, i].set_title(f'ch: {col}')
             axs[1, i].hist(bin_edges[:-1], bins=bin_edges,weights=hist_table_masked_total[i], color=col)
             axs[1, i].set_title(f'ch: {col} masked')
-        plt.savefig(f'histograms_{data_set_path.name}.png')
+        plt.savefig(Path('..') / '..' / 'data' / 'histograms' / f'histograms_{data_set_path.name}.png')
 
         for i in range(3):
             hist_table_total_super[i] += hist_table_total[i]
@@ -103,4 +103,4 @@ if __name__ == '__main__':
         axs[0, i].set_title(f'ch: {col}')
         axs[1, i].hist(bin_edges[:-1], bins=bin_edges,weights=hist_table_masked_total_super[i], color=col)
         axs[1, i].set_title(f'ch: {col} masked')
-    plt.savefig(f'histograms_{data_path.name}.png')
+    plt.savefig(Path('..') / '..' / 'data' / 'histograms' / f'histograms_{data_path.name}.png')
