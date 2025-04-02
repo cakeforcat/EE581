@@ -12,6 +12,7 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "pandas>=2.2.3",
     "requests>=2.32.3",
+    "scikit-learn==1.6.1",
     "segmentation-models==1.0.1",
     "tensorflow>=2.19.0",
     "tqdm>=4.67.1",
