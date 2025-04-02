@@ -1,13 +1,20 @@
 <pre>
-Store the dataset as follows locally:
+Data from the fetch script is stored as follows:
 
 .
-├── original_dataset            
+├── CAS_original           
 │   ├── Moxitaidi (UAV-0.6m)
-│   │   └── img
+│   │   ├── img
+│   │   └── mask
 │   ├── Moxitaidi (UAV-1m)
 │   ├── ...
 │   └── Wenchuan
+├── landslide4sense_original           
+│   ├── TrainData
+│   │   ├── img
+│   │   └── mask
+│   ├── TestData
+│   └── ValidData
 │
 └── median_filtered		# all median filtered images in here
     ├── Moxitaidi (UAV-0.6m)
@@ -18,4 +25,5 @@ Store the dataset as follows locally:
 
 The idea is to have an exact copy of the original dataset structure for each
 script that outputs the modifications of the original images.
+
 </pre>
