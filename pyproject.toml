@@ -4,9 +4,15 @@ version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = [
+    "google>=3.0.0",
     "h5py>=3.13.0",
+    "keras>=3.9.1",
     "matplotlib>=3.10.0",
+    "notebook>=7.3.3",
     "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
     "requests>=2.32.3",
+    "segmentation-models==1.0.1",
+    "tensorflow>=2.19.0",
     "tqdm>=4.67.1",
 ]
