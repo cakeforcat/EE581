@@ -34,5 +34,10 @@ end
 
 precision = true_pos / (true_pos + false_pos);
 recall = true_pos / (true_pos + false_neg);
+f1_score = (2 * precision * recall ) / (precision + recall);
 
-f1_score = (2 * precision * recall ) / (precision + recall)
+disp('Recall');
+disp(recall);
+
+disp('F1 Score');
+disp(f1_score);

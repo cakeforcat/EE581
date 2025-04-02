@@ -19,8 +19,8 @@ for i=1:length(masks_files)
     mask = imread(masks_path);
     mask = mask > 0;
 
-    se = strel('disk', 3);
-    im_morphology = imclose(mask, se);
+    se = strel('disk', 4);
+    im_morphology = imdilate(mask, se);
 
     imwrite(im_morphology, strcat(processedMasks, masks_files(i).name));
 end
