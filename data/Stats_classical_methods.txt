@@ -1,0 +1,6 @@
+----- GLCM SVM Sense 7 Opening -----
+Precision = 3.08345
+Recall = 5.76430
+F1 score = 3.42810
+Accuracy  = 97.51267
+Duration of processing: 681.6s
